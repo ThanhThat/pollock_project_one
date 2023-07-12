@@ -1,0 +1,29 @@
+@mixin flex(
+  $justify: flex-start,
+  $align: center,
+  $wrap: wrap,
+  $direction: row
+) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
+
+@mixin transition($duration: 0.25s, $timing: ease) {
+  transition: all $duration $timing;
+  will-change: all;
+}
+
+@mixin size($width: 1rem, $height: 1rem) {
+  width: $width;
+  height: $height;
+}
+
+@mixin abs($x: 50%, $translateX: -50%, $y: 50%, $translateY: -50%) {
+  position: absolute;
+  top: $y;
+  left: $x;
+  transform: translateX($translateX) translateY($translateY);
+}

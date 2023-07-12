@@ -1,0 +1,50 @@
+.btn {
+  border: none;
+  padding: 1.3rem 2.4rem;
+  font-size: 1.4rem;
+  border-radius: 5px;
+  color: $text-btn;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  font-family: $font-family-heading;
+
+  cursor: pointer;
+
+  @include flex(center, center, nowrap, row);
+  @include transition();
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.btn--play {
+  padding: 0;
+  color: $text-heading;
+  background-color: transparent;
+
+  .play-icon {
+    @include flex(center, center);
+    @include size(5.2rem, 5.2rem);
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-right: 7px;
+  }
+}
+
+.btn--primary {
+  background-color: $action-blue;
+}
+
+.btn--purple {
+  background-color: $action-purple;
+}
+
+.btn--md {
+  padding: 1.8rem 3.2rem;
+}
+
+.btn--lg {
+}

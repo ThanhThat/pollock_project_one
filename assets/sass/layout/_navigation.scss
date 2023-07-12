@@ -1,0 +1,36 @@
+.nav {
+  &__link {
+    display: inline-block;
+    color: $text-text;
+    font-weight: 500;
+    line-height: 2.4rem;
+    text-transform: uppercase;
+    font-family: $font-family-heading;
+    letter-spacing: -0.3px;
+
+    @include transition();
+
+    &:hover {
+      color: $text-heading;
+    }
+  }
+
+  &__link + .nav__link {
+    margin-left: 3rem;
+  }
+
+  &__link.active {
+    color: $text-heading;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      background-color: $action-green;
+      border-radius: 50%;
+
+      @include abs(50%, -50%, -50%, 0);
+      @include size();
+    }
+  }
+}

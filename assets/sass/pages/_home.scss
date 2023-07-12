@@ -1,0 +1,63 @@
+#home {
+  background-color: #f7f5f1;
+  padding: 1.6rem 0;
+  height: fit-content;
+
+  .hero {
+    background: url("../images/hero_background.svg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    height: 100vh;
+  }
+
+  .hero-wrap {
+    @include flex(space-between, center, nowrap, row);
+  }
+
+  .hero-start {
+    width: 60%;
+
+    &__heading {
+      position: relative;
+      display: inline-block;
+      font-size: 7.2rem;
+      font-family: $font-family-heading;
+      font-weight: 500;
+      line-height: 7.8rem;
+      letter-spacing: -2px;
+      color: $text-heading;
+      margin-bottom: 4rem;
+
+      &:after {
+        content: attr(data-content);
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    &__desc {
+      font-size: 1.8rem;
+      width: 67rem;
+      color: $text-text;
+      margin-bottom: 7rem;
+      text-shadow: 2px 2px 3px rgba(0 0 0 / 0.2);
+    }
+
+    &__btn-group {
+      @include flex(flex-start, center, nowrap, row);
+      gap: 1rem;
+    }
+  }
+
+  .hero-end {
+    width: 40%;
+
+    img {
+      object-fit: cover;
+      object-position: right;
+    }
+  }
+}

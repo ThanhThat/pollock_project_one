@@ -1,0 +1,23 @@
+html {
+  // 62.5% <=> 10px
+  font-size: 62.5%;
+  line-height: 1.4;
+  font-family: $font-family-base;
+}
+
+body {
+  font-size: 1.6rem;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 117rem;
+  width: calc(100% - 3.2rem);
+  margin: 0 auto;
+}
+
+.text-gradient {
+  background: linear-gradient(#857fff, #ffc0ec);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

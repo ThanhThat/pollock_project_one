@@ -1,0 +1,36 @@
+.header {
+  height: $header-height;
+  margin-bottom: 9rem;
+
+  @include flex(space-between, center, nowrap, row);
+
+  &__logo {
+    @include transition();
+  }
+
+  &__logo:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+
+  &-right {
+    @include flex(space-between, center, nowrap, row);
+
+    &__search,
+    &__bag {
+      margin-right: 2rem;
+      cursor: pointer;
+
+      @include transition();
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+
+    &__bag {
+      margin-right: 3rem;
+      cursor: pointer;
+    }
+  }
+}
