@@ -38,6 +38,17 @@
 
     @media (max-width: map-get($breakpoints, md)) {
       align-items: center;
+
+      .hero-start {
+        margin-top: unset;
+        width: 100%;
+
+        @include flex(center, center, wrap, column);
+      }
+
+      .hero-end {
+        display: none;
+      }
     }
   }
 
@@ -82,12 +93,6 @@
     @media (max-width: map-get($breakpoints, lg)) {
       margin-top: 16rem;
     }
-
-    @media (min-width: map-get($breakpoints, x-sm)) and (max-width: map-get($breakpoints, md)) {
-      width: 100%;
-      margin-top: unset;
-      @include flex(center, center, wrap, column);
-    }
   }
 
   .hero-end {
@@ -96,10 +101,6 @@
 
     img {
       object-fit: cover;
-    }
-
-    @media (min-width: map-get($breakpoints, x-sm)) and (max-width: map-get($breakpoints, md)) {
-      display: none;
     }
   }
 
