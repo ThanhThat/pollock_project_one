@@ -1,0 +1,51 @@
+.card {
+  max-width: 37rem;
+  height: 30rem;
+  padding: 0 3.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: $white-bg;
+  border: 1px solid rgba(97, 119, 152, 0.2);
+
+  @include flex(center, center, wrap, column);
+  @include transition();
+
+  &:hover {
+    box-shadow: 0px 20px 50px 0px rgba(79, 119, 255, 0.2);
+  }
+
+  &__icon {
+    margin-bottom: 2.2rem;
+    width: 6rem;
+    height: 6rem;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 4rem;
+    color: $primary-color-black;
+    text-align: center;
+    /* Headline/Headline 3 */
+    font-family: Outfit;
+    font-size: 2.2rem;
+    font-weight: 400;
+    line-height: 3.2rem; /* 145.455% */
+    letter-spacing: -1px;
+  }
+
+  &__desc {
+    color: $text-text;
+    text-align: center;
+    /* Paragraph/Paragraph 2 */
+    font-weight: 400;
+    line-height: 2.6rem; /* 162.5% */
+  }
+}
+
+.card-group {
+  @include flex(center, center);
+  gap: 3rem;
+}

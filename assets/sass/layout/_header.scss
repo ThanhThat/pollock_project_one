@@ -1,6 +1,5 @@
 .header {
   height: $header-height;
-  margin-bottom: 9rem;
   position: relative;
 
   @include flex(space-between, center, nowrap, row);

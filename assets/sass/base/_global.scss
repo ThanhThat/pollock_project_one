@@ -9,6 +9,7 @@ body {
   font-size: 1.6rem;
   overflow-x: hidden;
   overflow-y: auto;
+  background-color: $primary-bg;
 
   &::-webkit-scrollbar {
     -webkit-appearance: none; // Luôn cho scrollbar xuất hiện
@@ -42,4 +43,8 @@ body.open-menu {
   background: linear-gradient(#857fff, #ffc0ec);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.mt-70 {
+  margin-top: 7rem;
 }

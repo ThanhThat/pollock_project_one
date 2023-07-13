@@ -1,25 +1,49 @@
 #home {
-  background-color: #f7f5f1;
   padding: 1.6rem 0;
-  height: fit-content;
+  height: auto;
 
   .hero {
     background: url("../images/hero_background.svg");
     background-position: top center;
     background-repeat: no-repeat;
-    background-size: 80%;
-    height: 100vh;
+    background-size: contain;
+    height: calc(95rem - 1.6rem - $header-height);
+    position: relative;
+
+    @include flex();
+
+    &__down {
+      width: 8rem;
+      height: 8rem;
+      background-color: #f9c45c;
+      border-radius: 50%;
+      box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+
+      @include abs(50%, -50%, 98%, -30%);
+      @include flex(center, center);
+      @include transition();
+
+      &:hover {
+        background-color: #eca71c;
+      }
+    }
   }
 
   $gap: 1.6rem;
   .hero-wrap {
-    max-width: inherit;
-    @include flex(space-between, center, nowrap, row);
+    height: inherit;
+    @include flex(center, start, nowrap, row);
     gap: $gap;
+
+    @media (max-width: map-get($breakpoints, md)) {
+      align-items: center;
+    }
   }
 
   .hero-start {
-    width: calc(65% - ($gap / 2));
+    width: calc(60% - ($gap / 2));
+    margin-top: 23rem;
 
     &__heading {
       position: relative;
@@ -54,22 +78,106 @@
       @include flex(flex-start, center, nowrap, row);
       gap: 1rem;
     }
+
+    @media (max-width: map-get($breakpoints, lg)) {
+      margin-top: 16rem;
+    }
+
+    @media (min-width: map-get($breakpoints, x-sm)) and (max-width: map-get($breakpoints, md)) {
+      width: 100%;
+      margin-top: unset;
+      @include flex(center, center, wrap, column);
+    }
   }
 
   .hero-end {
-    width: calc(35% - ($gap / 2));
+    width: calc(40% - ($gap / 2));
+    margin-top: 9rem;
 
     img {
       object-fit: cover;
     }
+
+    @media (min-width: map-get($breakpoints, x-sm)) and (max-width: map-get($breakpoints, md)) {
+      display: none;
+    }
   }
 
-  @media (max-width: map-get($breakpoints, sm)) {
-    .hero-start {
-      width: 100%;
+  .section-first {
+    padding: 15rem 0 12rem;
+    background-color: #fff;
+    height: 10rem;
+    text-align: center;
+    height: fit-content;
+
+    .section-first-wrap {
+      @include flex(center, center, wrap, column);
     }
-    .hero-end {
-      display: none;
+
+    &__title {
+      color: $text-heading;
+      font-family: $font-family-heading;
+      font-size: 6.4rem;
+      font-weight: 500;
+      line-height: 7.2rem;
+      letter-spacing: -2px;
+      max-width: 97rem;
+      margin-bottom: 3rem;
+    }
+
+    &__desc {
+      margin-bottom: 8rem;
+      color: $text-text;
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 2.8rem; /* 155.556% */
+      letter-spacing: -0.3px;
+      max-width: 97rem;
+    }
+
+    &__working {
+      margin-top: 12rem;
+      max-width: 79.3rem;
+      color: $text-color-black;
+      text-align: center;
+      /* Headline/Headline 2 */
+      font-family: $font-family-heading;
+      font-size: 3.6rem;
+      font-weight: 500;
+      line-height: 4.6rem; /* 127.778% */
+      letter-spacing: -1px;
+    }
+  }
+
+  .section-first-brands {
+    margin-top: 8.5rem;
+
+    @include flex(space-around, center);
+    gap: 4rem 10.5rem;
+
+    &__item {
+      text-align: center;
+    }
+
+    &__item img {
+      width: 100%;
+      cursor: pointer;
+      transform: translateY(0);
+
+      @include transition();
+
+      &:hover {
+        opacity: 0.7;
+        transform: translateY(-4px);
+      }
+    }
+
+    @media (max-width: map-get($breakpoints, md)) {
+      gap: 3rem;
+    }
+
+    @media (max-width: map-get($breakpoints, sm)) {
+      flex-direction: column;
     }
   }
 }

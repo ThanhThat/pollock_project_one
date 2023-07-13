@@ -1,6 +1,5 @@
 .hero-child {
   @include abs(50%, -50%, 50%, -50%);
-  // @include flex(center, center, wrap, column);
 
   &__title {
     font-size: 4.8rem;
