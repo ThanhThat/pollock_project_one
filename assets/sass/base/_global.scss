@@ -15,14 +15,14 @@ body {
   }
   // CSS scrollbar dọc (Chrome)
   &::-webkit-scrollbar:vertical {
-    width: 11px;
+    width: 6px;
   }
   &::-webkit-scrollbar-thumb {
     background-color: darken(
-      $action-blue,
+      rgba($color: $action-blue, $alpha: 0.8),
       15
     ); // darken => Làm tối màu chỉ định
-    border-right: 5px $action-blue solid;
+    border-right: 5px rgba($color: $action-blue, $alpha: 0.8) solid;
     border-top-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
   }

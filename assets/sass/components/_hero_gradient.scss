@@ -1,0 +1,47 @@
+.wrap-header {
+  padding-top: 1.6rem;
+  height: 50rem;
+  position: relative;
+  overflow: hidden;
+  // inset: 0;
+
+  .circle-bottom-left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    // inset: 0;
+    transform: translateX(-50%) translateY(50%);
+    width: 783.403px;
+    height: 595.023px;
+    border-radius: 783.403px;
+    opacity: 0.4000000059604645;
+    background: linear-gradient(224deg, #61dcdf 0%, #886cff 100%);
+    filter: blur(100px);
+  }
+
+  .circle-bottom-center {
+    position: absolute;
+    left: 50%;
+    bottom: -40%;
+    transform: translateY(50%);
+    width: 500px;
+    height: 500px;
+    border-radius: 60%;
+    background-color: $action-blue;
+    opacity: 0.30000001192092896;
+    filter: blur(100px);
+  }
+
+  .circle-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateX(70%) translateY(-40%);
+    width: 761px;
+    height: 743.782px;
+    border-radius: 60%;
+    background-color: #886cff;
+    opacity: 0.30000001192092896;
+    filter: blur(100px);
+  }
+}

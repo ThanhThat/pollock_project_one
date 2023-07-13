@@ -1,0 +1,32 @@
+.breadcrumb {
+  padding: 0 0;
+  margin-bottom: 1rem;
+  list-style: none;
+
+  @include flex(center, center, wrap);
+
+  &__item a {
+    color: $text-heading;
+    font-family: $font-family-heading;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-weight: 500;
+  }
+
+  &__item.active {
+    color: $text-text;
+    text-transform: uppercase;
+  }
+
+  .breadcrumb__item + .breadcrumb__item {
+    padding-left: 0.5rem;
+  }
+
+  .breadcrumb__item + .breadcrumb__item::before {
+    float: left;
+    padding-right: 0.5rem;
+    color: #6c757d;
+    content: "/";
+  }
+}
