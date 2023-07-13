@@ -13,12 +13,13 @@
 
   $gap: 1.6rem;
   .hero-wrap {
+    max-width: inherit;
     @include flex(space-between, center, nowrap, row);
     gap: $gap;
   }
 
   .hero-start {
-    width: calc(60% - ($gap / 2));
+    width: calc(65% - ($gap / 2));
 
     &__heading {
       position: relative;
@@ -56,10 +57,19 @@
   }
 
   .hero-end {
-    width: calc(40% - ($gap / 2));
+    width: calc(35% - ($gap / 2));
 
     img {
       object-fit: cover;
+    }
+  }
+
+  @media (max-width: map-get($breakpoints, sm)) {
+    .hero-start {
+      width: 100%;
+    }
+    .hero-end {
+      display: none;
     }
   }
 }

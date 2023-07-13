@@ -8,6 +8,28 @@ html {
 body {
   font-size: 1.6rem;
   overflow-x: hidden;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    -webkit-appearance: none; // Luôn cho scrollbar xuất hiện
+  }
+  // CSS scrollbar dọc (Chrome)
+  &::-webkit-scrollbar:vertical {
+    width: 11px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: darken(
+      $action-blue,
+      15
+    ); // darken => Làm tối màu chỉ định
+    border-right: 5px $action-blue solid;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+}
+
+body.open-menu {
+  overflow: hidden;
 }
 
 .container {

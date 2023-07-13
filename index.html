@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./assets/css/main.min.css" />
 
     <!-- JS -->
-    <script src="./assets/js/main.js" defer></script>
+    <script src="./assets/js/main.js" type="module" defer></script>
   </head>
   <body>
     <div id="home">
@@ -18,7 +18,14 @@
           <h1 class="header__logo" arial-label="Pollock">
             <img src="./assets/images/pollock_logo_black.svg" alt="pollock" />
           </h1>
-          <nav class="nav">
+          <nav class="nav" id="nav-js">
+            <button class="close-menu">
+              <img
+                src="./assets/images/Right square 2.svg"
+                alt="Right squere 2"
+              />
+            </button>
+
             <a href="/" class="nav__link active">Home</a>
 
             <a href="service.html" class="nav__link">Service</a>
@@ -44,9 +51,11 @@
             </li>
           </ul>
 
-          <div class="header__menu-icon">
+          <div class="header__menu-icon" id="menu-js">
             <img src="./assets/images/menu-icon.svg" alt="menu icon" />
           </div>
+
+          <div class="header__overlay"></div>
         </header>
       </div>
 
