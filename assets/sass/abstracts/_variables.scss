@@ -20,3 +20,18 @@ $text-text-gray: #e7e5ea;
 
 // height
 $header-height: 4.8rem;
+
+// breakpoint
+$breakpoints: (
+  // <=575px
+  x-sm: 0em,
+
+  // >= 576px
+  sm: 36em,
+
+  // >= 768px
+  md: 48em,
+
+  // >= 992px
+  lg: 62em
+);

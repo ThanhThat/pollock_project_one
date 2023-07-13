@@ -179,8 +179,41 @@ body {
   opacity: 0.6;
 }
 .header-right__bag {
+  position: relative;
   margin-right: 3rem;
   cursor: pointer;
+}
+.header-right__bag::after {
+  content: "";
+  display: block;
+  background-color: #ef3737;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(140%) translateY(0);
+          transform: translateX(140%) translateY(0);
+  width: 1rem;
+  height: 1rem;
+}
+.header__menu-icon {
+  display: none;
+  cursor: pointer;
+}
+.header__menu-icon:hover {
+  opacity: 0.6;
+}
+@media (max-width: 62em) {
+  .header__logo {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .header__menu-icon {
+    display: block;
+    margin-left: 3rem;
+  }
 }
 
 .nav__link {
@@ -218,6 +251,40 @@ body {
   width: 1rem;
   height: 1rem;
 }
+@media (max-width: 62em) {
+  .nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 3.2rem;
+    background-color: #fff;
+    z-index: 999;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 3rem;
+  }
+  .nav__link {
+    display: block;
+  }
+  .nav__link + .nav__link {
+    margin-left: unset;
+  }
+}
 
 #home {
   background-color: #f7f5f1;
@@ -249,9 +316,10 @@ body {
           flex-direction: row;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  gap: 1.6rem;
 }
 #home .hero-start {
-  width: 60%;
+  width: calc(60% - 0.8rem);
 }
 #home .hero-start__heading {
   position: relative;
@@ -273,10 +341,11 @@ body {
 }
 #home .hero-start__desc {
   font-size: 1.8rem;
-  width: 67rem;
   color: #7b88a8;
   margin-bottom: 7rem;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+  letter-spacing: -0.3px;
+  line-height: 2.8rem;
 }
 #home .hero-start__btn-group {
   display: -webkit-box;
@@ -297,11 +366,9 @@ body {
   gap: 1rem;
 }
 #home .hero-end {
-  width: 40%;
+  width: calc(40% - 0.8rem);
 }
 #home .hero-end img {
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: right;
-     object-position: right;
 }

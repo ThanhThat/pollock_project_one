@@ -29,8 +29,40 @@
     }
 
     &__bag {
+      position: relative;
       margin-right: 3rem;
       cursor: pointer;
+
+      &::after {
+        content: "";
+        display: block;
+        background-color: $action-red;
+        border: 1px solid #fff;
+        border-radius: 50%;
+
+        @include abs(0, 140%, 0, 0);
+        @include size();
+      }
+    }
+  }
+
+  &__menu-icon {
+    display: none;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  @media (max-width: map-get($breakpoints, lg)) {
+    &__logo {
+      flex: 1;
+    }
+
+    &__menu-icon {
+      display: block;
+      margin-left: 3rem;
     }
   }
 }
