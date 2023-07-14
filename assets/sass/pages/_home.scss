@@ -1,5 +1,5 @@
 #home {
-  padding: 1.6rem 0;
+  padding: 1.6rem 0 0;
   height: auto;
 
   .hero {
@@ -358,7 +358,7 @@
 
   .section-fourth {
     height: 50rem;
-
+    width: 100%;
     position: relative;
 
     &__img {
@@ -368,7 +368,7 @@
 
       img {
         width: 100%;
-        object-fit: contain;
+        object-fit: cover;
       }
     }
 
@@ -399,6 +399,15 @@
         letter-spacing: -1px;
 
         margin-bottom: 6.5rem;
+      }
+
+      @media (max-width: map-get($breakpoints, md)) {
+        &__heading {
+          font-size: 3rem;
+
+          line-height: 1.5; /* 116.667% */
+          letter-spacing: -1px;
+        }
       }
     }
   }
