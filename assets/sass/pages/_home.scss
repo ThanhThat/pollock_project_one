@@ -104,6 +104,7 @@
     }
   }
 
+  // Section first
   .section-first {
     padding: 15rem 0 12rem;
     background-color: #fff;
@@ -198,6 +199,160 @@
 
     @media (max-width: map-get($breakpoints, sm)) {
       flex-direction: column;
+    }
+  }
+
+  // Section second
+  .section-second {
+    padding: 12rem 0;
+  }
+
+  .section-second-header {
+    text-align: center;
+    margin-bottom: 12rem;
+
+    &__title {
+      color: $text-heading;
+      /* Display/Display 3 */
+      font-family: $font-family-heading;
+      font-size: 4.8rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 5.6rem; /* 116.667% */
+      letter-spacing: -2px;
+      margin-bottom: 3rem;
+    }
+
+    &__desc {
+      color: #7b88a8;
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 2.8rem; /* 155.556% */
+      letter-spacing: -0.3px;
+    }
+  }
+
+  .section-second-body {
+  }
+
+  .section-second-item {
+    @include flex(center);
+    gap: 5rem 0;
+
+    @media (max-width: map-get($breakpoints, md)) {
+      .section-second-item__img {
+        width: 100%;
+      }
+
+      .section-second-item__info {
+        width: 100%;
+      }
+    }
+
+    &.section-second-item--row-reverse {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .section-second-item__img {
+    width: 50%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .section-second-item__info {
+    width: 50%;
+
+    h4 {
+      color: $text-heading;
+      /* Headline/Headline 2 */
+      font-family: $font-family-heading;
+      font-size: 3.6rem;
+      font-weight: 500;
+      line-height: 4.6rem; /* 127.778% */
+      letter-spacing: -1px;
+      margin-bottom: 3rem;
+    }
+
+    p {
+      color: $black-200;
+      /* Paragraph/Paragraph 1 */
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 2.8rem; /* 155.556% */
+      letter-spacing: -0.3px;
+    }
+
+    ul {
+      margin-top: 5rem;
+
+      h5 {
+        @include flex();
+        gap: 1.3rem;
+        color: $text-heading;
+        /* Headline/Headline 4 */
+        font-family: $font-family-heading;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 2.8rem; /* 155.556% */
+        letter-spacing: 0.4px;
+      }
+
+      p {
+        margin: 1rem 0 3rem 4.5rem;
+        /* Paragraph/Paragraph 2 */
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 2.6rem; /* 162.5% */
+      }
+    }
+  }
+
+  .section-third {
+    background-color: $white-bg;
+    padding: 12rem 0 12rem 0;
+
+    &-header {
+      color: $text-heading;
+      text-align: center;
+      /* Headline/Headline 1 */
+      font-family: $font-family-heading;
+      font-size: 4.2rem;
+      font-weight: 500;
+      line-height: 5rem; /* 119.048% */
+      letter-spacing: -0.84px;
+      margin-bottom: 10rem;
+    }
+
+    &-body {
+      @include flex(center, center, wrap, column);
+      gap: 5rem;
+    }
+  }
+
+  .section-third-body-row {
+    @include flex(center, center, nowrap, row);
+    gap: 3rem;
+
+    &__img img {
+      border-radius: 40px;
+    }
+
+    &__img figcaption {
+      color: $action-blue;
+      /* Headline/Headline 3 */
+      font-family: $font-family-heading;
+      font-size: 2.2rem;
+      font-weight: 400;
+      line-height: 3.2rem; /* 145.455% */
+      letter-spacing: -1px;
+      margin-top: 2.9rem;
+    }
+
+    @media (max-width: map-get($breakpoints, md)) {
+      flex-wrap: wrap;
     }
   }
 }

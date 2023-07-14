@@ -55,6 +55,10 @@
     }
   }
 
+  &__overlay {
+    display: none;
+  }
+
   @media (max-width: map-get($breakpoints, lg)) {
     &__logo {
       flex: 1;

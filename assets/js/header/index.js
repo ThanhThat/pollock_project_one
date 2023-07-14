@@ -43,6 +43,7 @@ function menuHandle() {
     );
 
     overlay.style.cssText = `
+      display: block;
       position: fixed;
       top: 0;
       left: 0;

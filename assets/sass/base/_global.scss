@@ -34,8 +34,8 @@ body.open-menu {
 }
 
 .container {
-  max-width: 117rem;
-  width: calc(100% - 3.2rem);
+  width: 117rem;
+  max-width: calc(100% - 3.2rem);
   margin: 0 auto;
 }
 
@@ -47,4 +47,8 @@ body.open-menu {
 
 .mt-70 {
   margin-top: 7rem;
+}
+
+.mt-150 {
+  margin-top: 15rem;
 }
