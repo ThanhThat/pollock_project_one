@@ -97,13 +97,17 @@
       height: 4.8rem;
       border-radius: 5px;
       border: 1px solid #e7e5ea;
+      width: 100%;
+      position: relative;
 
-      @include flex(space-between);
+      @include flex(space-between, center, nowrap, row);
 
       input {
         padding: 1.1rem 0 1.1rem 1.8rem;
         flex: 1;
+
         border: none;
+        background-color: transparent;
 
         &:focus {
           outline: none;
@@ -124,6 +128,8 @@
         margin-right: 1.5rem;
 
         cursor: pointer;
+
+        @include abs(calc(100% - 3rem), 0);
       }
     }
   }
@@ -315,7 +321,185 @@
     }
   }
 
-  .text-green {
-    color: $action-green;
+  .blog-related-articles {
+    @include flex(flex-start, start, nowrap, column);
+    background-color: #f8fafc;
+    border-radius: 5px;
+    width: 100%;
+    padding: 2rem 4rem 5rem 4rem;
+
+    &__heading {
+      color: $text-heading;
+      /* Headline/Headline 4 */
+      font-family: $font-family-heading;
+      font-size: 1.8rem;
+      font-weight: 500;
+      line-height: 2.8rem; /* 155.556% */
+      letter-spacing: 0.4px;
+      margin-bottom: 3rem;
+    }
+
+    &-posts {
+      @include flex(center, center, nowrap, row);
+      gap: 3.2rem;
+
+      &-item {
+        width: calc(100% / 3);
+
+        &__img {
+          width: 100%;
+
+          img {
+            width: inherit;
+          }
+        }
+
+        &__name {
+          color: $text-heading;
+          /* Paragraph/Paragraph 1 */
+          font-family: $font-family-base;
+          font-size: 1.8rem;
+          font-weight: 400;
+          line-height: 2.8rem; /* 155.556% */
+          letter-spacing: -0.3px;
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
+
+  .blog-comments {
+    margin-top: 4.8rem;
+    padding: 4.2rem 3rem 5rem 3rem;
+    border: 1px solid var(--lines-hr-line, rgba(97, 119, 152, 0.2));
+    background: $white-bg;
+    width: 100%;
+
+    svg.seperate {
+      width: 100%;
+    }
+
+    &__heading {
+      color: $text-heading;
+      /* Headline/Headline 4 */
+      font-family: $font-family-heading;
+      font-size: 1.8rem;
+      font-weight: 500;
+      line-height: 2.8rem; /* 155.556% */
+      letter-spacing: 0.4px;
+      // margin-bottom: 3rem;
+    }
+
+    &-body {
+      margin-top: 2rem;
+
+      &-item {
+        @include flex(flex-start, start, nowrap, row);
+        gap: 3rem;
+        margin-top: 2rem;
+
+        &.blog-comments-body-item--reply {
+          padding-left: 18rem;
+          margin-top: 3rem;
+        }
+      }
+
+      &-item-content-header {
+        @include flex(space-between);
+        margin-bottom: 2.4rem;
+      }
+
+      &-item-content-header__name {
+        color: $text-heading;
+        /* Paragraph/Paragraph 2 */
+        font-weight: 400;
+        line-height: 2.6rem; /* 162.5% */
+      }
+
+      &-item-content-header__date {
+        color: $text-text;
+        /* Headline/Headline 6 */
+        font-family: $font-family-heading;
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 2.4rem; /* 171.429% */
+        letter-spacing: 0.4px;
+        opacity: 0.699999988079071;
+      }
+
+      &-item-content__text {
+        color: $text-text;
+        /* Paragraph/Paragraph 2 */
+        font-weight: 400;
+        line-height: 2.6rem; /* 162.5% */
+      }
+
+      &__reply {
+        @include flex();
+        gap: 2px;
+        margin-top: 4rem;
+
+        color: $action-blue;
+
+        /* Link Small */
+        font-family: $font-family-heading;
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 2.4rem; /* 171.429% */
+        letter-spacing: -0.3px;
+        text-transform: uppercase;
+
+        img {
+          width: 13.437px;
+          height: 14px;
+          flex-shrink: 0;
+        }
+      }
+    }
+
+    &-form {
+      padding: 4rem 0rem 0 0rem;
+
+      &__heading {
+        color: $text-heading;
+        /* Headline/Headline 4 */
+        font-family: $font-family-heading;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 2.8rem; /* 155.556% */
+        letter-spacing: 0.4px;
+        margin-bottom: 3rem;
+      }
+
+      &__group {
+        @include flex(flex-start, center, nowrap, row);
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      &__control {
+        width: 100%;
+        padding: 1.1rem 1.8rem;
+        border-radius: 5px;
+        border: 1px solid #e7e5ea;
+        background: $white-bg;
+
+        color: $text-text;
+
+        /* Paragraph/Paragraph 2 */
+        font-family: $font-family-base;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 2.6rem; /* 162.5% */
+
+        &.blog-comments-form__group--w-30 {
+          width: calc(100% / 3);
+        }
+      }
+
+      textarea.blog-comments-form__control {
+        resize: none;
+      }
+    }
   }
 }

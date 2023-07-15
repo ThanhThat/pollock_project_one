@@ -1,5 +1,5 @@
 .post-content {
-  padding: 2.5rem 4rem 4.3rem;
+  padding: 2.5rem 4rem 0;
 
   &__name {
     color: $text-heading;
@@ -11,12 +11,42 @@
     letter-spacing: -1px;
   }
 
+  &__title {
+    color: $text-heading;
+    /* Paragraph/Paragraph 2 */
+    font-weight: 400;
+    line-height: 2.6rem; /* 162.5% */
+    margin-top: 3rem;
+  }
+
   &__desc {
     color: $text-text;
     /* Paragraph/Paragraph 2 */
     font-weight: 400;
     line-height: 2.6rem; /* 162.5% */
-    margin: 3rem 0 4rem;
+    margin: 3rem 0 3rem;
+  }
+
+  &__img {
+    width: 100%;
+
+    img {
+      width: inherit;
+    }
+  }
+
+  &__quote {
+    border-radius: 5px;
+    background: #f8fafc;
+    color: $text-heading;
+    /* Paragraph/Paragraph 1 */
+    font-family: $font-family-base;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.8rem; /* 155.556% */
+    letter-spacing: -0.3px;
+
+    padding: 3rem 5rem 3.6rem;
   }
 
   @media (max-width: map-get($breakpoints, md)) {
@@ -60,5 +90,48 @@
     font-weight: 500;
     line-height: 2.4rem; /* 171.429% */
     letter-spacing: 0.4px;
+  }
+}
+
+.post-footer {
+  @include flex(space-between);
+  padding: 2rem 4rem;
+
+  &__tags {
+    @include flex();
+    gap: 1rem;
+
+    a {
+      display: block;
+      background-color: $action-blue;
+      color: $text-text-white;
+      padding: 0 5px;
+
+      text-align: center;
+      font-family: $font-family-base;
+      font-size: 1.2rem;
+      font-weight: 400;
+      line-height: 2.4rem; /* 200% */
+      letter-spacing: -0.3px;
+      border-radius: 5px;
+      @include transition();
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__social-list {
+    @include flex();
+    gap: 1rem;
+
+    a {
+      @include transition();
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
   }
 }

@@ -45,6 +45,10 @@ body.open-menu {
   -webkit-text-fill-color: transparent;
 }
 
+.mt-30 {
+  margin-top: 3rem;
+}
+
 .mt-70 {
   margin-top: 7rem;
 }
@@ -71,4 +75,12 @@ body.open-menu {
 
 .m-center {
   margin: 0 auto;
+}
+
+.text-green {
+  color: $action-green;
+}
+
+.text-blue {
+  color: $action-blue;
 }
