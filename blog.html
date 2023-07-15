@@ -211,6 +211,38 @@
                 <button class="btn btn--primary btn--md">Read more</button>
               </div>
             </article>
+
+            <ul class="blog-content-pagination">
+              <li>
+                <a href="#" class="blog-content-pagination__page"
+                  ><img
+                    src="./assets/images/fi_chevron-right.svg"
+                    alt="chevron right"
+                /></a>
+              </li>
+              <li>
+                <a href="#" class="blog-content-pagination__page">1</a>
+              </li>
+              <li>
+                <a href="#" class="blog-content-pagination__page active">2</a>
+              </li>
+              <li>
+                <a href="#" class="blog-content-pagination__page">3</a>
+              </li>
+              <li>
+                <a href="#" class="blog-content-pagination__page">4</a>
+              </li>
+
+              <li>...</li>
+
+              <li>
+                <a href="#" class="blog-content-pagination__page"
+                  ><img
+                    src="./assets/images/fi_chevron-left.svg"
+                    alt="chevron right"
+                /></a>
+              </li>
+            </ul>
           </section>
           <aside class="blog-sidebar">
             <div class="blog-sidebar-item">
@@ -315,10 +347,40 @@
 
               <div class="blog-sidebar-subscribe__content">
                 <h4>Subscribe To Our Newsletter Today</h4>
-                <button class="btn btn--primary btn--md">Subscribe</button>
+                <button class="btn btn--primary btn--md btn--md-w-100">
+                  Subscribe
+                </button>
               </div>
             </div>
           </aside>
+        </div>
+
+        <div class="blog-subscribe">
+          <div class="blog-subscribe__img">
+            <img src="./assets/images/cta_bg.png" alt="cta background" />
+          </div>
+
+          <div class="blog-subscribe-content">
+            <p class="blog-subscribe-content__desc">
+              Visit our blog! Follow the developments in the technology &
+              entrepreneur world
+            </p>
+
+            <h3 class="blog-subscribe-content__heading">
+              Subscribe to our newsletter
+              <span class="text-green">free</span> and stay updated on the
+              latest developments!
+            </h3>
+
+            <form action="" class="form-subscribe align-center">
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Enter email"
+              />
+              <button class="btn--primary btn">Subscribe</button>
+            </form>
+          </div>
         </div>
       </main>
 
@@ -371,7 +433,7 @@
                   </p>
                 </li>
                 <li>
-                  <form action="" id="footer__form">
+                  <form action="" class="form-subscribe">
                     <input type="text" placeholder="Enter email" />
                     <button class="btn--primary btn">Submit</button>
                   </form>

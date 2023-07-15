@@ -1,27 +1,62 @@
 #blog {
   .main {
-    padding: 10rem 0;
+    padding: 10rem 0 0;
     background-color: #fff;
   }
 
   .main-wrap {
     @include flex(flex-start, start, nowrap, row);
     gap: 6.5rem;
+
+    padding-bottom: 10rem;
+
+    @media (max-width: map-get($breakpoints, md)) {
+      flex-direction: column;
+
+      .blog-content {
+        width: 100%;
+      }
+    }
   }
 
   .blog-content {
     width: calc(70% - 3.25rem);
     @include flex(flex-start, start, nowrap, column);
     gap: 5rem;
+
+    &-pagination {
+      @include flex(center);
+      width: 100%;
+      gap: 6px;
+
+      &__page {
+        width: 5rem;
+        height: 5rem;
+
+        color: $text-text;
+        /* Link Small */
+        font-family: $font-family-heading;
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 2.4rem; /* 171.429% */
+        letter-spacing: -0.3px;
+        text-transform: uppercase;
+        border-radius: 5px;
+
+        @include flex(center, center);
+      }
+
+      &__page.active {
+        color: $text-text-white;
+        background-color: $action-blue;
+      }
+    }
   }
 
   .post {
     border-radius: 5px;
     border: 1px solid #e7e5ea;
     background: $white-bg;
-
-    &__img {
-    }
   }
 
   .blog-sidebar {
@@ -46,6 +81,12 @@
       line-height: 2.8rem; /* 155.556% */
       letter-spacing: 0.4px;
       margin-bottom: 2.8rem;
+    }
+
+    @media (max-width: map-get($breakpoints, md)) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
     }
   }
 
@@ -215,5 +256,66 @@
 
       margin-bottom: 4rem;
     }
+
+    @media (max-width: map-get($breakpoints, md)) {
+      h4 {
+        font-size: 2.8rem;
+      }
+    }
+  }
+
+  .blog-subscribe {
+    position: relative;
+    height: 50rem;
+
+    &__img {
+      height: inherit;
+
+      img {
+        height: inherit;
+      }
+    }
+  }
+
+  .blog-subscribe-content {
+    @include abs();
+    text-align: center;
+    width: 87rem;
+    max-width: calc(100% - 3.2rem);
+    padding: 10.7rem 0;
+
+    &__desc {
+      color: $text-text;
+      /* Headline/Headline 3 */
+      font-family: $font-family-heading;
+      font-size: 2.2rem;
+      font-weight: 400;
+      line-height: 3.2rem; /* 145.455% */
+      letter-spacing: -1px;
+      margin-bottom: 3rem;
+    }
+
+    &__heading {
+      color: $text-heading;
+
+      /* Display/Display 3 */
+      font-family: $font-family-heading;
+      font-size: 4.8rem;
+      font-weight: 500;
+      line-height: 5.6rem; /* 116.667% */
+      letter-spacing: -2px;
+      margin-bottom: 7rem;
+    }
+
+    @media (max-width: map-get($breakpoints, md)) {
+      &__heading {
+        font-size: 3.2rem;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  .text-green {
+    color: $action-green;
   }
 }

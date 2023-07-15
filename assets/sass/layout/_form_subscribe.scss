@@ -1,0 +1,37 @@
+.form-subscribe {
+  @include flex();
+  gap: 6px;
+  margin: 2.5rem 0 1.5rem 0;
+
+  input {
+    border: none;
+    width: 23.5rem;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: $text-text-gray;
+    padding: 1.45rem 1.8rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  input.form-control {
+    border: 1px solid #e7e5ea;
+    background: $text-text-white;
+  }
+
+  input::placeholder {
+    color: $text-text;
+    /* Paragraph/Paragraph 2 */
+    font-family: $font-family-base;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 26px; /* 162.5% */
+    opacity: 0.699999988079071;
+  }
+
+  &.align-center {
+    @include flex(center);
+  }
+}

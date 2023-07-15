@@ -20,6 +20,12 @@
   &:hover {
     opacity: 0.8;
   }
+
+  @media (max-width: map-get($breakpoints, md)) {
+    &.btn--md-w-100 {
+      width: 100%;
+    }
+  }
 }
 
 .btn--play {
@@ -53,7 +59,4 @@
 .btn--md {
   padding: 1.8rem 3.2rem;
   width: 15.8rem;
-}
-
-.btn--lg {
 }

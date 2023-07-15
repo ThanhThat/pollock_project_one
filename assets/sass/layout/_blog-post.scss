@@ -18,6 +18,13 @@
     line-height: 2.6rem; /* 162.5% */
     margin: 3rem 0 4rem;
   }
+
+  @media (max-width: map-get($breakpoints, md)) {
+    &__name {
+      font-size: 2.6rem;
+      line-height: 1.5;
+    }
+  }
 }
 
 .post-content-header {
