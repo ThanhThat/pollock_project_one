@@ -1,0 +1,331 @@
+#shop {
+  background-color: #fff;
+
+  .wrap-main {
+    @include flex(flex-start, start, nowrap, row);
+    gap: 6.5rem;
+    padding: 10rem 0 12rem;
+  }
+
+  .filter {
+    @include flex(flex-start, start, nowrap, column);
+    gap: 5rem;
+    width: 27.4rem;
+
+    &-field {
+      width: 100%;
+    }
+  }
+
+  .filter-header {
+    @include flex(space-between);
+    border-bottom: 1px solid #e7e5ea;
+    height: 4.7rem;
+    padding-bottom: 1rem;
+    box-sizing: content-box;
+  }
+
+  .filter-heading {
+    color: $text-heading;
+    /* Headline/Headline 4 */
+    font-family: $font-family-heading;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2.8rem; /* 155.556% */
+    letter-spacing: 0.4px;
+  }
+
+  .filter-list {
+    margin-top: 2rem;
+    @include flex(flex-start, start, nowrap, column);
+    gap: 2rem;
+  }
+
+  .filter-item {
+    width: 100%;
+    &-content {
+      @include flex(space-between);
+    }
+  }
+
+  .filter-item-content.filter-control label {
+    color: $text-heading;
+    /* Paragraph/Paragraph 3 */
+    font-family: $font-family-base;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.4rem; /* 171.429% */
+    letter-spacing: -0.3px;
+  }
+
+  .filter-control label.text-gray {
+    color: $text-text;
+  }
+
+  .filter-control {
+    & > label {
+      position: relative;
+      padding-left: 2.6rem;
+      user-select: none;
+      display: block;
+      cursor: pointer;
+
+      @include transition();
+
+      &:hover input ~ .filter-checkmark {
+        background-color: #ccc;
+      }
+
+      & input:checked ~ .filter-checkmark {
+        background-color: #292f32;
+      }
+
+      & input:checked ~ .filter-checkmark::after {
+        display: block;
+      }
+    }
+  }
+
+  .filter-control input[type="checkbox"] {
+    background: #e7e5ea;
+    border: none;
+    position: absolute;
+
+    opacity: 0;
+    width: 0;
+    height: 0;
+    cursor: pointer;
+  }
+
+  .filter-checkmark {
+    background-color: #e7e5ea;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+
+    // position: relative;
+
+    &:after {
+      content: url("../images/shop_filter_check.svg");
+      display: none;
+      @include abs();
+    }
+  }
+
+  .filter-item-sub {
+    padding-left: 3rem;
+    margin-top: 2rem;
+    @include flex(flex-start, start, nowrap, column);
+    gap: 1.6rem;
+  }
+
+  .range-slide {
+    margin-top: 3rem;
+    position: relative;
+    width: 100%;
+    height: 2px;
+
+    .slide {
+      position: absolute;
+      background-color: #ccc;
+      height: 2px;
+      left: 0;
+      right: 0;
+    }
+
+    .line {
+      position: absolute;
+      left: 0;
+      right: 0;
+      background-color: $action-blue;
+      height: 2px;
+    }
+
+    .thumb {
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      background-color: $action-blue;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      margin-left: -5px;
+    }
+
+    input {
+      appearance: none;
+      position: absolute;
+      pointer-events: none;
+      z-index: 3;
+      height: 2px;
+      top: 0;
+      width: 100%;
+      opacity: 0;
+      margin: 0;
+    }
+
+    input::-webkit-slider-thumb {
+      appearance: none;
+      pointer-events: all;
+      border-radius: 50%;
+      cursor: pointer;
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  .display {
+    width: 100%;
+    @include flex(space-between);
+
+    span {
+      display: block;
+      color: $text-heading;
+      font-family: $font-family-heading;
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: 2.4rem; /* 171.429% */
+      letter-spacing: -0.3px;
+      margin-top: 5px;
+    }
+  }
+
+  .filter-footer {
+    font-family: $font-family-heading;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 2.4rem; /* 171.429% */
+    letter-spacing: -0.3px;
+    text-transform: uppercase;
+    margin-top: 2rem;
+
+    @include flex(space-between);
+
+    p {
+      color: $text-text;
+      /* Link Small */
+    }
+
+    a {
+      color: $action-blue;
+      /* Link Small */
+    }
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .content-header {
+    @include flex(space-between);
+    border-bottom: 1px solid #e7e5ea;
+    height: 4.7rem;
+    padding-bottom: 1rem;
+    box-sizing: content-box;
+  }
+
+  .content-name {
+    color: $text-heading;
+    /* Headline/Headline 4 */
+    font-family: $font-family-heading;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2.8rem; /* 155.556% */
+    letter-spacing: 0.4px;
+  }
+
+  .content-filter {
+    border-radius: 5px;
+    border: 1px solid var(--lines-gray-line, #e7e5ea);
+    // background: $white-bg;
+    background-color: #fff;
+    width: 21rem;
+    overflow: hidden;
+
+    position: relative;
+
+    &::after {
+      content: url("../images/filter_icon_up.svg");
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 1.6rem;
+      transform: translateY(-40%);
+      z-index: 1;
+    }
+
+    select {
+      width: 100%;
+      color: $text-text;
+      font-family: $font-family-base;
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 2.6rem; /* 162.5% */
+      border: none;
+      padding: 1.1rem 0 1.1rem 1.8rem;
+      appearance: none;
+      position: relative;
+      background-color: transparent;
+      z-index: 2;
+    }
+  }
+
+  .product-list {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid #e7e5ea;
+
+    @include flex(center, center, wrap, row);
+    gap: 4rem 3rem;
+
+    .product-item {
+      text-align: center;
+      width: calc(100% / 3 - 2rem);
+      border: 1px solid transparent;
+      transform: translateY(0);
+      border-radius: 5px;
+      overflow: hidden;
+
+      @include transition();
+
+      &:hover {
+        border-color: $action-blue;
+        transform: translateY(-4px);
+      }
+    }
+
+    .product-img {
+      width: 100%;
+      border-radius: 5px;
+      overflow: hidden;
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+
+    .product-name {
+      margin: 1.5rem auto;
+      color: $text-heading;
+      /* Headline/Headline 4 */
+      font-family: $font-family-heading;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 28px; /* 155.556% */
+      letter-spacing: 0.4px;
+    }
+
+    .product-price {
+      color: $text-text;
+      /* Paragraph/Paragraph 2 */
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 26px; /* 162.5% */
+    }
+  }
+}

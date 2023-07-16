@@ -1,0 +1,27 @@
+.pagination {
+  @include flex(center);
+  width: 100%;
+  gap: 6px;
+
+  &__page {
+    width: 5rem;
+    height: 5rem;
+
+    color: $text-text;
+    /* Link Small */
+    font-family: $font-family-heading;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 2.4rem; /* 171.429% */
+    letter-spacing: -0.3px;
+    text-transform: uppercase;
+    border-radius: 5px;
+
+    @include flex(center, center);
+  }
+
+  &__page.active {
+    color: $text-text-white;
+    background-color: $action-blue;
+  }
+}
