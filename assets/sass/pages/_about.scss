@@ -1,0 +1,208 @@
+#about {
+  .about-content {
+    padding: 12rem 0;
+  }
+
+  .about-heading {
+    color: $text-heading;
+    text-align: center;
+    font-family: $font-family-heading;
+    font-size: 4.8rem;
+    font-weight: 500;
+    line-height: 5.6rem; /* 116.667% */
+    letter-spacing: -2px;
+    margin-bottom: 10rem;
+  }
+
+  .about-post-list {
+    padding-bottom: 12rem;
+    @include flex(flex-start, start, nowrap, column);
+    gap: 10rem 0;
+  }
+
+  .about-post-item {
+    @include flex(space-between, center, nowrap, row);
+    gap: 0 13rem;
+
+    .about-post-content {
+      width: 40%;
+    }
+
+    .about-post-title {
+      color: $text-heading;
+      /* Headline/Headline 2 */
+      font-family: $font-family-heading;
+      font-size: 3.6rem;
+      font-weight: 500;
+      line-height: 4.6rem; /* 127.778% */
+      letter-spacing: -1px;
+      margin-bottom: 5rem;
+    }
+
+    .about-post-desc {
+      color: $black-200;
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 2.8rem; /* 155.556% */
+      letter-spacing: -0.3px;
+      margin-bottom: 7rem;
+    }
+
+    .about-post-img {
+      width: 60%;
+
+      img {
+        width: 57rem;
+        height: 57rem;
+        max-width: 100%;
+      }
+    }
+
+    &.about-post-item--reverse {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .about-fact {
+    position: relative;
+    height: 40rem;
+
+    .about-fact-bg {
+      height: 100%;
+
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .about-fact-list {
+    @include abs();
+    @include flex(center, center, nowrap, row);
+    gap: 3rem;
+    text-align: center;
+
+    .about-fact-item {
+      width: 37rem;
+    }
+
+    .about-fact-number {
+      color: $action-purple;
+      font-family: $font-family-heading;
+      font-size: 6.4rem;
+      font-weight: 500;
+      line-height: 7.2rem; /* 112.5% */
+      letter-spacing: -2px;
+      margin-bottom: 2rem;
+    }
+
+    .about-fact-sub {
+      color: $text-text-white;
+      /* Headline/Headline 3 */
+      font-family: $font-family-heading;
+      font-size: 2.2rem;
+      font-weight: 400;
+      line-height: 3.2rem; /* 145.455% */
+      letter-spacing: -1px;
+      margin-bottom: 4rem;
+      display: block;
+    }
+
+    .about-fact-desc {
+      color: $text-text;
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 2.8rem; /* 155.556% */
+      letter-spacing: -0.3px;
+    }
+  }
+
+  .about-reviews {
+    padding-top: 12rem;
+  }
+
+  .about-reviews-wrap {
+  }
+
+  .about-reviews-heading {
+    color: $text-heading;
+    text-align: center;
+    /* Display/Display 3 */
+    font-family: $font-family-heading;
+    font-size: 4.8rem;
+    font-weight: 500;
+    line-height: 5.6rem; /* 116.667% */
+    letter-spacing: -2px;
+    margin-bottom: 3rem;
+  }
+
+  .about-reviews-sub-heading {
+    color: $text-text;
+    text-align: center;
+    font-family: $font-family-heading;
+    font-size: 2.2rem;
+    font-weight: 400;
+    line-height: 3.2rem; /* 145.455% */
+    letter-spacing: -1px;
+    margin-bottom: 8rem;
+  }
+
+  .about-reviews-list {
+    @include flex(space-between, start, nowrap, row);
+    gap: 3rem;
+  }
+
+  .about-reviews-item {
+    text-align: center;
+    border-radius: 2rem;
+    background: #fff;
+    padding: 3.5rem 3.5rem 4.5rem;
+    /* Blue Shadow */
+    box-shadow: 0px 20px 50px 0px rgba(79, 119, 255, 0.2);
+
+    @include flex(center, center, nowrap, column);
+
+    .about-reviews-avatar {
+      width: 7rem;
+      height: 7rem;
+      overflow: hidden;
+      margin-bottom: 1rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+      }
+    }
+
+    .about-reviews-name {
+      color: $text-heading;
+      /* Headline/Headline 3 */
+      font-family: $font-family-heading;
+      font-size: 2.2rem;
+      font-weight: 400;
+      line-height: 3.2rem; /* 145.455% */
+      letter-spacing: -1px;
+    }
+
+    .about-reviews-job {
+      color: $text-text;
+      /* Paragraph/Paragraph 2 */
+      font-weight: 400;
+      line-height: 2.6rem; /* 162.5% */
+      margin-bottom: 2rem;
+    }
+
+    .about-reviews-content {
+      color: $text-text;
+      /* Paragraph/Paragraph 1 */
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 2.8rem; /* 155.556% */
+      letter-spacing: -0.3px;
+      margin-top: 3rem;
+    }
+  }
+}
