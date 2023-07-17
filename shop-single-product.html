@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop - Pollock</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/main.min.css" />
+
+    <!-- JS -->
+    <script src="./assets/js/main.js" type="module" defer></script>
+  </head>
+  <body>
+    <div id="shop">
+      <div class="wrap-header">
+        <div class="circle-bottom-left"></div>
+        <div class="circle-bottom-center"></div>
+        <div class="circle-right"></div>
+        <div class="container">
+          <header class="header">
+            <h1 class="header__logo" arial-label="Pollock">
+              <img src="./assets/images/pollock_logo_black.svg" alt="pollock" />
+            </h1>
+            <nav class="nav" id="nav-js">
+              <button class="close-menu">
+                <img
+                  src="./assets/images/Right square 2.svg"
+                  alt="Right squere 2"
+                />
+              </button>
+
+              <a href="/" class="nav__link">Home</a>
+
+              <a href="service.html" class="nav__link">Service</a>
+
+              <a href="about.html" class="nav__link">About</a>
+
+              <a href="shop.html" class="nav__link active">shop</a>
+
+              <a href="blog.html" class="nav__link">Blog</a>
+
+              <a href="contact.html" class="nav__link">Contact</a>
+            </nav>
+
+            <ul class="header-right">
+              <li>
+                <img
+                  class="header-right__search"
+                  src="./assets/images/Search.svg"
+                  alt="Search"
+                />
+              </li>
+              <li>
+                <img
+                  class="header-right__bag"
+                  src="./assets/images/Bag 2.svg"
+                  alt="Bag"
+                />
+              </li>
+              <li>
+                <button class="btn btn--primary">Sign up</button>
+              </li>
+            </ul>
+
+            <div class="header__menu-icon" id="menu-js">
+              <img src="./assets/images/menu-icon.svg" alt="menu icon" />
+            </div>
+
+            <div class="header__overlay"></div>
+          </header>
+        </div>
+
+        <div class="hero-child">
+          <h2 class="hero-child__title">Our Shop</h2>
+          <nav aria-label="breadcrumb">
+            <ul class="breadcrumb">
+              <li class="breadcrumb__item"><a href="/">Homepage</a></li>
+              <li class="breadcrumb__item active" aria-current="page">Shop</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <main id="single-product">
+        <div class="product container">
+          <div class="product-first">
+            <div class="product-slide">
+              <div class="img-wrap">
+                <img
+                  src="./assets/images/shop_single_product.png"
+                  alt="product 1"
+                />
+              </div>
+
+              <div class="img-list">
+                <div class="img-item active">
+                  <img
+                    src="./assets/images/shop_single_product.png"
+                    alt="product 2"
+                  />
+                </div>
+                <div class="img-item">
+                  <img src="./assets/images/product_3.png" alt="product 3" />
+                </div>
+                <div class="img-item">
+                  <img src="./assets/images/product_4.png" alt="product 4" />
+                </div>
+              </div>
+            </div>
+
+            <div class="product-content">
+              <h3 class="product-name">Samsung S22</h3>
+
+              <span class="product-price">From $299</span>
+              <div class="product-starts">
+                <span class="product-start"
+                  ><img src="./assets/images/Stars.svg" alt="start"
+                /></span>
+              </div>
+              <p class="product-desc">
+                Make everyday epic. Introducing Galaxy S22 and S22+ with
+                Nightography camera, storage to hold all your night shots and a
+                way beyond all-day battery.
+                <br /><br />
+                Buy your Samsung Galaxy S22 Phones today at the best price!
+              </p>
+              <a href="#" class="product-desc-more">More info</a>
+
+              <div class="product-color">
+                <h4 class="product-color-alias">Colors</h4>
+                <div class="product-color-list">
+                  <button
+                    class="product-color-item product-color-item--light active"
+                    aria-label="white"
+                  >
+                    light
+                  </button>
+                  <button
+                    class="product-color-item product-color-item--gray"
+                    aria-label="gray"
+                  >
+                    gray
+                  </button>
+                  <button
+                    class="product-color-item product-color-item--pink"
+                    aria-label="pink"
+                  >
+                    pink
+                  </button>
+                </div>
+              </div>
+
+              <div class="product-quantity">
+                <input
+                  type="number"
+                  name="quantity"
+                  min="1"
+                  id="quantity"
+                  value="1"
+                />
+                <button class="btn btn--primary">Add to cart</button>
+              </div>
+
+              <div class="product-social-wishlist">
+                <a href="#" class="product-wishlist"
+                  ><img src="./assets/images/heart.svg" alt="wishlist"
+                /></a>
+                <div class="product-social">
+                  <a href="#" class="product-mail">
+                    <img src="./assets/images/mail.svg" alt="mail" />
+                  </a>
+                  <a href="#" class="product-facebook">
+                    <img src="./assets/images/face.svg" alt="facebook" />
+                  </a>
+                  <a href="#" class="product-instagram">
+                    <img src="./assets/images/instagram.svg" alt="instagram" />
+                  </a>
+                  <a href="#" class="product-twitter">
+                    <img src="./assets/images/twitter.svg" alt="twitter" />
+                  </a>
+                </div>
+              </div>
+
+              <div class="product-info">
+                <p class="product-sku">SKU: 001</p>
+                <p class="product-category">
+                  Category: <a href="#">Smartphone</a>
+                </p>
+                <p class="product-tags">Tags: <a href="#">Electronics</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-second">
+            <div class="product-tabs">
+              <div class="tabs-item active">Description</div>
+              <div class="tabs-item">Aditional Information</div>
+              <div class="tabs-item">Reviews</div>
+              <div class="tabs-item">Shipping Rates</div>
+            </div>
+
+            <div class="products-tab-pane">
+              <div class="tab-pane-item">
+                <p>
+                  It’s our brightest innovation yet. The sensor pulls in more
+                  light, the Super Clear Glass dials down lens flare, and
+                  fast-acting AI delivers near-instant intelligent processing.
+                </p>
+                <p>
+                  Sunlight, meet Galaxy S22's bright and Galaxy S22+'s brightest
+                  display*. The stunning Dynamic AMOLED 2X display is crafted
+                  specifically for high outdoor visibility, keeping the view
+                  clear in bright daylight.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="similar-product">
+          <div class="container similar-product-wrap">
+            <h3 class="similar-product-heading">
+              Here you can buy similar products
+            </h3>
+
+            <div class="similar-product-list">
+              <a href="#" class="similar-product-item">
+                <div class="product-img">
+                  <img src="./assets/images/product_3.png" alt="product 3" />
+                </div>
+                <p class="product-name">S22+ 256GB</p>
+                <span class="product-price">From $799</span>
+              </a>
+
+              <a href="#" class="similar-product-item">
+                <div class="product-img">
+                  <img src="./assets/images/product_4.png" alt="product 4" />
+                </div>
+                <p class="product-name">Z Fold 2</p>
+                <span class="product-price">From $499</span>
+              </a>
+
+              <a href="#" class="similar-product-item">
+                <div class="product-img">
+                  <img src="./assets/images/product_5.png" alt="product 5" />
+                </div>
+                <p class="product-name">Tab S7 FE</p>
+                <span class="product-price">From $699</span>
+              </a>
+
+              <a href="#" class="similar-product-item">
+                <div class="product-img">
+                  <img src="./assets/images/product_6.png" alt="product 6" />
+                </div>
+                <p class="product-name">S22 Ultra</p>
+                <span class="product-price">From $999</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta">
+          <div class="cta__img">
+            <img
+              src="./assets/images/shop_cta_bg.png"
+              alt="shop cta background"
+            />
+          </div>
+
+          <div class="cta-content">
+            <h3 class="cta-content__heading">
+              Get help, find answers, download drivers, manuals and much more
+            </h3>
+
+            <p class="cta-content__desc mt-30">
+              Contact us online through chat and get support from an expert
+            </p>
+
+            <button class="btn--primary btn btn--md m-center mt-70">
+              Chat now
+            </button>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__row pt-100 pb-100">
+            <div class="footer__col w-170">
+              <img src="./assets/images/pollock_logo_white.svg" alt="pollock" />
+            </div>
+            <div class="footer__col w-170">
+              <h4>Company</h4>
+              <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </div>
+
+            <div class="footer__col w-170">
+              <h4>Services</h4>
+              <ul>
+                <li><a href="#">Branding</a></li>
+                <li><a href="#">Websites</a></li>
+                <li><a href="#">Development</a></li>
+                <li><a href="#">Strategy</a></li>
+                <li><a href="#">Platforms</a></li>
+              </ul>
+            </div>
+
+            <div class="footer__col w-170">
+              <h4>Contact</h4>
+              <ul>
+                <li><a href="#">Help Desk</a></li>
+                <li><a href="#">Docs</a></li>
+                <li><a href="#">Open a Ticket</a></li>
+                <li><a href="#">Chat</a></li>
+                <li><a href="#">Forum</a></li>
+              </ul>
+            </div>
+
+            <div class="footer__col w-370">
+              <h4>Newsletter</h4>
+              <ul>
+                <li>
+                  <p>
+                    Subscribe to our newsletter to keep up to date on our
+                    marketing, website, design services, and tips.
+                  </p>
+                </li>
+                <li>
+                  <form action="" class="form-subscribe">
+                    <input type="text" placeholder="Enter email" />
+                    <button class="btn--primary btn">Submit</button>
+                  </form>
+                </li>
+
+                <li>
+                  <p>
+                    We hate spam as much as you do. We will never, ever send you
+                    such emails.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            class="footer__row justify-content-space align-items-center border-top pb-40 pt-40"
+          >
+            <div class="footer__col">
+              <p class="footer__copyright">
+                © 2022 Pollock LLC. All Rights Reserved. Terms & Conditions.
+                Privacy Policy.
+              </p>
+            </div>
+            <div class="footer__col">
+              <div class="footer__social-list">
+                <a href="" class=""
+                  ><img src="./assets/images/facebook_icon.svg" alt="facebook"
+                /></a>
+
+                <a href="" class=""
+                  ><img src="./assets/images/linked_icon.svg" alt="linked"
+                /></a>
+
+                <a href="" class=""
+                  ><img src="./assets/images/twitter_icon.svg" alt="twitter"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
