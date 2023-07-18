@@ -14,9 +14,9 @@
 .cta-content {
   @include abs();
   text-align: center;
-  width: 87rem;
+  width: 97rem;
   max-width: calc(100% - 3.2rem);
-  padding: 10.7rem 0;
+  padding: 10.7rem 8rem;
 
   &__desc {
     color: $text-text;
