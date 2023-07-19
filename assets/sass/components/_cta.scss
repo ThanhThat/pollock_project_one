@@ -9,6 +9,13 @@
       height: inherit;
     }
   }
+
+  @media (max-width: map-get($breakpoints, sm)) {
+    .cta-content {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
 }
 
 .cta-content {

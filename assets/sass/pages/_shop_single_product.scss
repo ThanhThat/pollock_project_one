@@ -1,5 +1,6 @@
 #single-product {
   padding-top: 10rem;
+
   .product {
     @include flex(flex-start, start, nowrap, column);
   }

@@ -31,6 +31,16 @@
     background: $white-bg;
   }
 
+  .post.post--single {
+    border-right-color: transparent;
+    border-left-color: transparent;
+
+    .post-content {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
   .blog-sidebar {
     width: calc(30% - 3.25rem);
 
@@ -261,7 +271,7 @@
     }
 
     &-posts {
-      @include flex(flex-start, center, wrap, row);
+      @include flex(flex-start, flex-start, nowrap, row);
       gap: 3.2rem;
 
       &-item {
@@ -289,6 +299,7 @@
       }
 
       @media (max-width: map-get($breakpoints, md)) {
+        flex-wrap: wrap;
         &-item {
           width: calc(100% / 2 - 1.6rem);
         }
