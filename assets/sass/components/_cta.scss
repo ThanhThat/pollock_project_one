@@ -11,6 +11,7 @@
   }
 
   @media (max-width: map-get($breakpoints, sm)) {
+    height: 56rem;
     .cta-content {
       padding-left: 0;
       padding-right: 0;
