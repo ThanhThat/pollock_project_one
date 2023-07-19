@@ -114,6 +114,10 @@ body.open-menu {
   float: right;
 }
 
+.dropdown {
+  display: none !important;
+}
+
 .btn {
   border: none;
   display: block;
@@ -2509,6 +2513,9 @@ body.open-menu {
     right: 0;
     bottom: 0;
     z-index: 999;
+    background-color: #fff;
+    padding: 3rem;
+    overflow-y: auto;
   }
 }
 #shop .filter-header {
