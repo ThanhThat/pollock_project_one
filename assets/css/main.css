@@ -3309,12 +3309,20 @@ body.open-menu {
   border-bottom: 1px solid #e7e5ea;
 }
 #single-product .product-second .tab-pane-item {
+  gap: 3rem;
+  display: none;
+  color: #7b88a8;
+  font-weight: 400;
+  line-height: 2.6rem; /* 162.5% */
+}
+#single-product .product-second .tab-pane-item.active {
+  display: block;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -3324,10 +3332,6 @@ body.open-menu {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 3rem;
-  color: #7b88a8;
-  font-weight: 400;
-  line-height: 2.6rem; /* 162.5% */
 }
 #single-product .product-second .tab-pane-item p {
   width: calc(50% - 1.5rem);
