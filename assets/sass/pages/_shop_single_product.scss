@@ -7,6 +7,7 @@
 
   .product-first {
     @include flex(flex-start, start, nowrap);
+    gap: 3rem 0;
 
     .product-slide {
       width: 60%;
@@ -15,13 +16,25 @@
     .product-content {
       width: 40%;
     }
+
+    @media (max-width: map-get($breakpoints, lg)) {
+      flex-direction: column;
+      .product-slide {
+        width: 100%;
+      }
+
+      .product-content {
+        width: 100%;
+      }
+    }
   }
 
   .product-slide {
     .img-wrap {
-      width: 57rem;
+      width: 100%;
       height: 57rem;
-      max-width: 100%;
+      max-width: calc(100% - 3.2rem);
+      margin: 0 auto;
 
       img {
         width: 100%;
@@ -285,6 +298,12 @@
         width: calc(50% - 1.5rem);
       }
     }
+
+    @media (max-width: map-get($breakpoints, sm)) {
+      .tab-pane-item p {
+        width: 100%;
+      }
+    }
   }
 
   .similar-product {
@@ -307,6 +326,17 @@
   .similar-product-list {
     @include flex(space-between);
     margin-top: 8rem;
+
+    @media (max-width: map-get($breakpoints, sm)) {
+      .similar-product-item {
+        width: 100%;
+        height: auto;
+        .product-img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
   }
 
   .similar-product-item {
