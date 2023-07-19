@@ -33,14 +33,40 @@
 
   .service-first {
     @include flex(flex-start, center, nowrap, row);
+    margin-bottom: 10rem;
 
     .service-first-card {
       @include flex(flex-start, flex-start, nowrap, row);
       gap: 3rem;
 
       width: 60%;
-      height: 66rem;
+      // height: 66rem;
       margin-top: 0;
+    }
+
+    @media (max-width: map-get($breakpoints, lg)) {
+      flex-direction: column;
+      gap: 4rem;
+
+      .service-first-card {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .service-first-content {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: map-get($breakpoints, sm)) {
+      .service-first-card {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .service-card-group {
+        margin-top: 0;
+      }
     }
   }
 
@@ -52,6 +78,7 @@
   .service-card {
     width: 27rem;
     height: 27rem;
+    max-width: 100%;
     text-align: center;
     border-radius: 20px;
     border: 1px solid var(--lines-hr-line, rgba(97, 119, 152, 0.2));
@@ -130,17 +157,22 @@
 
     & > img {
       width: 100%;
-      height: 100%;
+      height: 44rem;
       object-fit: cover;
     }
   }
 
   .service-cta-content {
     width: 50rem;
+    max-width: calc(100% - 3.2rem);
     position: absolute;
     top: 50%;
     left: 10%;
     transform: translateY(-35%);
+
+    @media (max-width: map-get($breakpoints, sm)) {
+      left: 1.6rem;
+    }
   }
 
   .service-cta-heading {
@@ -155,7 +187,7 @@
   }
 
   .service-cta-desc {
-    color: $header-height;
+    color: $text-text;
     /* Paragraph/Paragraph 1 */
     font-size: 18px;
     font-weight: 400;
@@ -374,7 +406,7 @@
     }
 
     .service-tables-item {
-      @include flex(flex-start, center);
+      @include flex(flex-start, center, nowrap);
       gap: 1.3rem;
 
       img {
@@ -423,10 +455,36 @@
         opacity: 0.8;
       }
     }
+
+    @media (max-width: map-get($breakpoints, lg)) {
+      flex-direction: column;
+      max-width: 100%;
+
+      .service-tables {
+        width: 57rem;
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: map-get($breakpoints, sm)) {
+      .service-tables-per-user {
+        padding: 0 1.6rem;
+      }
+
+      .service-tables-list {
+        padding: 0 1.6rem;
+      }
+    }
   }
 
   .service-logo {
     margin-top: 12rem;
+    max-width: 100%;
+
+    &-wrap {
+      width: 91.5rem;
+      max-width: 100%;
+    }
 
     &-heading {
       color: $text-color-black;
@@ -442,7 +500,15 @@
     .service-logo-brands {
       margin-top: 8rem;
 
-      @include flex(space-between, center, wrap, row);
+      @include flex(center, center, wrap, row);
+      gap: 4rem 4rem;
+    }
+
+    @media (max-width: map-get($breakpoints, sm)) {
+      .service-logo-brands {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   }
 }
