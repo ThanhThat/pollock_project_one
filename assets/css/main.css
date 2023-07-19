@@ -4399,6 +4399,9 @@ body.open-menu {
 #contact .contact-faq-item.active .contact-faq-question {
   color: #4f77ff;
 }
+#contact .contact-faq-item.active .contact-faq-answer {
+  display: block;
+}
 #contact .contact-faq-question {
   color: #2d3958;
   /* Headline/Headline 2 */
@@ -4415,9 +4418,10 @@ body.open-menu {
   font-weight: 400;
   line-height: 2.8rem; /* 155.556% */
   letter-spacing: -0.3px;
+  display: none;
 }
 #contact .contact-faq-icon {
-  width: 5rem;
+  min-width: 5rem;
   height: 5rem;
   cursor: pointer;
 }

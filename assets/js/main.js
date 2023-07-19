@@ -24,7 +24,12 @@ import tabs from "./tabs/index.js";
 
   if (!filterHeader || !filterList) return;
   filterHeader.forEach((item, index) => {
-    dropdown(item, filterList[index]);
+    dropdown(
+      item,
+      filterList[index],
+      "./assets/images/shop_angel.svg",
+      "./assets/images/filter_icon_up.svg"
+    );
   });
 
   const filterHeader2 = $$(".filter-item-content");
@@ -32,7 +37,12 @@ import tabs from "./tabs/index.js";
   if (!filterHeader2 || !filterList2) return;
   filterHeader2.forEach((item, index) => {
     console.log(filterList2);
-    dropdown(item, filterList2[index]);
+    dropdown(
+      item,
+      filterList2[index],
+      "./assets/images/shop_angel.svg",
+      "./assets/images/filter_icon_up.svg"
+    );
   });
 
   const imgList = $$(".img-list > .img-item");

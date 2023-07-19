@@ -146,6 +146,10 @@
       .contact-faq-question {
         color: $action-blue;
       }
+
+      .contact-faq-answer {
+        display: block;
+      }
     }
   }
 
@@ -168,10 +172,11 @@
     font-weight: 400;
     line-height: 2.8rem; /* 155.556% */
     letter-spacing: -0.3px;
+    display: none;
   }
 
   .contact-faq-icon {
-    width: 5rem;
+    min-width: 5rem;
     height: 5rem;
 
     cursor: pointer;
