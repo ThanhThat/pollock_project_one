@@ -304,12 +304,17 @@
     }
 
     .tab-pane-item {
-      @include flex();
       gap: 3rem;
+      display: none;
 
       color: $text-text;
       font-weight: 400;
       line-height: 2.6rem; /* 162.5% */
+
+      &.active {
+        display: block;
+        @include flex(flex-start, flex-start);
+      }
 
       p {
         width: calc(50% - 1.5rem);
