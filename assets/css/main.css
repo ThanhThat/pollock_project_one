@@ -505,19 +505,21 @@ body.open-menu {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 3rem;
 }
 
 .reviews-item {
+  width: 37rem;
+  max-width: 100%;
   text-align: center;
   border-radius: 2rem;
   background: #fff;
@@ -3512,6 +3514,7 @@ body.open-menu {
           flex-direction: row;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  margin-bottom: 10rem;
 }
 #service .service-first .service-first-card {
   display: -webkit-box;
@@ -3531,8 +3534,39 @@ body.open-menu {
       flex-wrap: nowrap;
   gap: 3rem;
   width: 60%;
-  height: 66rem;
   margin-top: 0;
+}
+@media (max-width: 62em) {
+  #service .service-first {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 4rem;
+  }
+  #service .service-first .service-first-card {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #service .service-first .service-first-content {
+    width: 100%;
+  }
+}
+@media (max-width: 36em) {
+  #service .service-first .service-first-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #service .service-first .service-card-group {
+    margin-top: 0;
+  }
 }
 #service .service-card-group {
   display: -webkit-box;
@@ -3555,6 +3589,7 @@ body.open-menu {
 #service .service-card {
   width: 27rem;
   height: 27rem;
+  max-width: 100%;
   text-align: center;
   border-radius: 20px;
   border: 1px solid var(--lines-hr-line, rgba(97, 119, 152, 0.2));
@@ -3636,17 +3671,23 @@ body.open-menu {
 }
 #service .service-cta-img > img {
   width: 100%;
-  height: 100%;
+  height: 44rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
 #service .service-cta-content {
   width: 50rem;
+  max-width: calc(100% - 3.2rem);
   position: absolute;
   top: 50%;
   left: 10%;
   -webkit-transform: translateY(-35%);
           transform: translateY(-35%);
+}
+@media (max-width: 36em) {
+  #service .service-cta-content {
+    left: 1.6rem;
+  }
 }
 #service .service-cta-heading {
   color: #2d3958;
@@ -3659,7 +3700,7 @@ body.open-menu {
   margin-bottom: 3rem;
 }
 #service .service-cta-desc {
-  color: 4.8rem;
+  color: #7b88a8;
   /* Paragraph/Paragraph 1 */
   font-size: 18px;
   font-weight: 400;
@@ -3951,8 +3992,8 @@ body.open-menu {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   gap: 1.3rem;
 }
 #service .service-tables-group .service-tables-item img {
@@ -3996,8 +4037,34 @@ body.open-menu {
 #service .service-tables-group .service-tables-btn:hover {
   opacity: 0.8;
 }
+@media (max-width: 62em) {
+  #service .service-tables-group {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 100%;
+  }
+  #service .service-tables-group .service-tables {
+    width: 57rem;
+    max-width: 100%;
+  }
+}
+@media (max-width: 36em) {
+  #service .service-tables-group .service-tables-per-user {
+    padding: 0 1.6rem;
+  }
+  #service .service-tables-group .service-tables-list {
+    padding: 0 1.6rem;
+  }
+}
 #service .service-logo {
   margin-top: 12rem;
+  max-width: 100%;
+}
+#service .service-logo-wrap {
+  width: 91.5rem;
+  max-width: 100%;
 }
 #service .service-logo-heading {
   color: #000;
@@ -4017,15 +4084,27 @@ body.open-menu {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  gap: 4rem 4rem;
+}
+@media (max-width: 36em) {
+  #service .service-logo .service-logo-brands {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 #contact main {
