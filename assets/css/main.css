@@ -3396,6 +3396,8 @@ body.open-menu {
   width: 57rem;
   height: 57rem;
   max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #about .about-post-item.about-post-item--reverse {
   -webkit-box-orient: horizontal;
@@ -3403,9 +3405,27 @@ body.open-menu {
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
+@media (max-width: 48em) {
+  #about .about-post-item {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 4rem 0;
+  }
+  #about .about-post-item .about-post-content {
+    width: 100%;
+  }
+  #about .about-post-item .about-post-img {
+    width: 100%;
+  }
+  #about .about-post-item .about-post-img img {
+    width: 100%;
+    height: auto;
+  }
+}
 #about .about-fact {
   position: relative;
   height: 40rem;
+  max-width: 100%;
 }
 #about .about-fact .about-fact-bg {
   height: 100%;
@@ -3414,6 +3434,21 @@ body.open-menu {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (max-width: 48em) {
+  #about .about-fact {
+    height: 100rem;
+  }
+  #about .about-fact .about-fact-bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
+  #about .about-fact .about-fact-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 7rem 0;
+  }
 }
 #about .about-fact-list {
   position: absolute;
@@ -3438,6 +3473,7 @@ body.open-menu {
       flex-wrap: nowrap;
   gap: 3rem;
   text-align: center;
+  max-width: calc(100% - 3.2rem);
 }
 #about .about-fact-list .about-fact-item {
   width: 37rem;

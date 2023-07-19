@@ -55,17 +55,37 @@
         width: 57rem;
         height: 57rem;
         max-width: 100%;
+        object-fit: cover;
       }
     }
 
     &.about-post-item--reverse {
       flex-direction: row-reverse;
     }
+
+    @media (max-width: map-get($breakpoints, md)) {
+      flex-wrap: wrap;
+      gap: 4rem 0;
+
+      .about-post-content {
+        width: 100%;
+      }
+
+      .about-post-img {
+        width: 100%;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
   }
 
   .about-fact {
     position: relative;
     height: 40rem;
+    max-width: 100%;
 
     .about-fact-bg {
       height: 100%;
@@ -75,6 +95,21 @@
         object-fit: cover;
       }
     }
+
+    @media (max-width: map-get($breakpoints, md)) {
+      height: 100rem;
+
+      .about-fact-bg {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+      }
+
+      .about-fact-list {
+        flex-wrap: wrap;
+        gap: 7rem 0;
+      }
+    }
   }
 
   .about-fact-list {
@@ -82,6 +117,7 @@
     @include flex(center, center, nowrap, row);
     gap: 3rem;
     text-align: center;
+    max-width: calc(100% - 3.2rem);
 
     .about-fact-item {
       width: 37rem;
