@@ -265,7 +265,8 @@
       gap: 3.2rem;
 
       &-item {
-        max-width: 23rem;
+        width: calc(100% / 3 - 1.6rem);
+        max-width: 100%;
 
         &__img {
           width: 100%;
@@ -286,11 +287,19 @@
           margin-top: 2rem;
         }
       }
+
+      @media (max-width: map-get($breakpoints, md)) {
+        &-item {
+          width: calc(100% / 2 - 1.6rem);
+        }
+      }
+
+      @media (max-width: map-get($breakpoints, sm)) {
+        &-item {
+          width: 100%;
+        }
+      }
     }
-
-    // @media (max-width) {
-
-    // }
   }
 
   .blog-comments {

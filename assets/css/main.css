@@ -2183,7 +2183,8 @@ body.open-menu {
   gap: 3.2rem;
 }
 #blog .blog-related-articles-posts-item {
-  max-width: 23rem;
+  width: calc(33.3333333333% - 1.6rem);
+  max-width: 100%;
 }
 #blog .blog-related-articles-posts-item__img {
   width: 100%;
@@ -2200,6 +2201,16 @@ body.open-menu {
   line-height: 2.8rem; /* 155.556% */
   letter-spacing: -0.3px;
   margin-top: 2rem;
+}
+@media (max-width: 48em) {
+  #blog .blog-related-articles-posts-item {
+    width: calc(50% - 1.6rem);
+  }
+}
+@media (max-width: 36em) {
+  #blog .blog-related-articles-posts-item {
+    width: 100%;
+  }
 }
 #blog .blog-comments {
   margin-top: 4.8rem;
