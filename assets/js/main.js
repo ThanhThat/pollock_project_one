@@ -4,9 +4,17 @@ import dropdown from "./dropdown/index.js";
 import filterProduct from "./filter_product/index.js";
 import menuHandle from "./header/index.js";
 import priceRange from "./price_range/index.js";
+import carousel from "./carousel/index.js";
 
 menuHandle();
-priceRange();
+
+const url = new URL(document.URL);
+const fileName = url.pathname.split("/").pop();
+
+if (fileName === "shop.html") {
+  priceRange();
+}
+
 filterProduct();
 
 const filterHeader = $$(".filter-header");
@@ -21,3 +29,8 @@ filterHeader2.forEach((item, index) => {
   console.log(filterList2);
   dropdown(item, filterList2[index]);
 });
+
+const imgList = $$(".img-list > .img-item");
+// const imgActive = $(".img-item.active");
+const imgWrap = $(".img-wrap > img");
+carousel(imgWrap, imgList);

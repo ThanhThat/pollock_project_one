@@ -5,6 +5,8 @@ function filterProduct() {
   const filterSidebar = $(".filter");
   const overlay = $(".header__overlay");
 
+  if (!filterIcon || !filterSidebar || !overlay) return;
+
   filterIcon.addEventListener("click", openFilterProduct);
   overlay.addEventListener("click", closeFilterProduct);
 

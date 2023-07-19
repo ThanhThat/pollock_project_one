@@ -8,6 +8,7 @@
   .product-first {
     @include flex(flex-start, start, nowrap);
     gap: 3rem 0;
+    max-width: 100%;
 
     .product-slide {
       width: 60%;
@@ -21,6 +22,14 @@
       flex-direction: column;
       .product-slide {
         width: 100%;
+
+        .img-wrap {
+          height: auto;
+
+          img {
+            object-fit: contain;
+          }
+        }
       }
 
       .product-content {
@@ -45,17 +54,25 @@
 
     .img-list {
       margin-top: 3rem;
+      display: flex;
 
-      @include flex();
-      gap: 3rem;
+      // @include flex(flex-start, flex-start, nowrap, row);
+      // gap: 3rem;
+      max-width: 100%;
+      overflow-x: scroll;
 
       .img-item {
-        width: 12rem;
-        height: 12rem;
+        display: inline-block;
+        min-width: 12rem;
+        min-height: 12rem;
         border: 2px solid transparent;
         border-radius: 5px;
         overflow: hidden;
         cursor: pointer;
+
+        & + .img-item {
+          margin-left: 3rem;
+        }
 
         @include transition();
 
@@ -66,7 +83,7 @@
         img {
           width: 100%;
           height: 100%;
-          object-fit: cover;
+          object-fit: contain;
         }
       }
 
